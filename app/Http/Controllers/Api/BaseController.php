@@ -14,9 +14,4 @@ class BaseController extends Controller
     {
         $this->serviceOrder = new ServiceOrder();
     }
-
-public function createOrder($input) {
-
-}
-
 }
