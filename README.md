@@ -5,18 +5,22 @@ qb.sql
 
 ## Логин и получение токена
 POST /api/signin
+
 параметры:
-email=ypurdy@example.org
-password=password
+
+- email=ypurdy@example.org
+- password=password
 
 ## Заказ
 POST: /api/order
+
 параметры:
--location_id=1
--volume=10
--temperature=-10
--start_date=2022-10-25
--period=3
+
+- location_id=1
+- volume=10
+- temperature=-10
+- start_date=2022-10-25
+- period=3
 
 плюс токен для авторизации
 
