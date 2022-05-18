@@ -15,6 +15,7 @@ class Order extends Model
     protected $fillable = [
         'user_id',
         'location_id',
+        'status_id',
         'amount',
         'begin',
         'end',
@@ -29,6 +30,11 @@ class Order extends Model
     public function location()
     {
         return $this->belongsTo(Location::class);
+    }
+
+    public function status()
+    {
+        return $this->belongsTo(Status::class);
     }
 
     public function blocks()

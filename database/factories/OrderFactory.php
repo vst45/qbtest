@@ -4,6 +4,7 @@ namespace Database\Factories;
 
 use App\Models\Location;
 use App\Models\User;
+use App\Models\Status;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 /**
@@ -32,6 +33,7 @@ class OrderFactory extends Factory
         return [
             'user_id' => User::get()->random()->id,
             'location_id' => Location::get()->random()->id,
+            'status_id' => Status::get()->random()->id,
             'amount' => random_int(12000, 25000),
             'begin' => date('Y-m-d', $begin),
             'end' => date('Y-m-d', $begin + random_int(3600 * 24 * 4, 3600 * 24 * 23)),

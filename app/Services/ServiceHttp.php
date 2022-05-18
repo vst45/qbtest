@@ -5,27 +5,24 @@ namespace App\Services;
 class ServiceHttp
 {
 
-    public static function sendResponse($data, $message, $code = 200)
+    public static function sendResponse($message, $data = [], $code = 200)
     {
         $response = [
             'success' => true,
-            'data'    => $data,
             'message' => $message,
+            'data'    => $data
         ];
 
         return response()->json($response, $code);
     }
 
-    public static function sendError($error, $errorMessages = [], $code = 404)
+    public static function sendError($message, $errorMessages = [], $code = 404)
     {
         $response = [
             'success' => false,
-            'message' => $error,
+            'message' => $message,
+            'errors' => $errorMessages
         ];
-
-        if (!empty($errorMessages)) {
-            $response['data'] = $errorMessages;
-        }
 
         return response()->json($response, $code);
     }

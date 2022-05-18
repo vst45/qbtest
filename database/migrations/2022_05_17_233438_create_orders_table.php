@@ -17,6 +17,7 @@ return new class extends Migration
             $table->id();
             $table->foreignId('user_id')->constrained();
             $table->foreignId('location_id')->constrained();
+            $table->foreignId('status_id')->constrained();
             $table->integer('amount');
             $table->date('begin');
             $table->date('end');

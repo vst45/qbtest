@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Хост: 127.0.0.1:3306
--- Время создания: Май 16 2022 г., 23:22
+-- Время создания: Май 18 2022 г., 03:21
 -- Версия сервера: 8.0.24
 -- Версия PHP: 8.1.1
 
@@ -180,125 +180,103 @@ CREATE TABLE `block_order` (
 --
 
 INSERT INTO `block_order` (`id`, `order_id`, `block_id`, `created_at`, `updated_at`) VALUES
-(1, 1, 102, NULL, NULL),
-(2, 1, 107, NULL, NULL),
-(3, 1, 17, NULL, NULL),
-(4, 1, 52, NULL, NULL),
-(5, 2, 18, NULL, NULL),
-(6, 2, 63, NULL, NULL),
-(7, 2, 29, NULL, NULL),
-(8, 2, 120, NULL, NULL),
+(1, 1, 61, NULL, NULL),
+(2, 1, 63, NULL, NULL),
+(3, 1, 52, NULL, NULL),
+(4, 1, 100, NULL, NULL),
+(5, 2, 23, NULL, NULL),
+(6, 2, 107, NULL, NULL),
+(7, 2, 17, NULL, NULL),
+(8, 2, 100, NULL, NULL),
 (9, 3, 23, NULL, NULL),
-(10, 3, 102, NULL, NULL),
-(11, 3, 18, NULL, NULL),
-(12, 3, 74, NULL, NULL),
-(13, 4, 102, NULL, NULL),
-(14, 4, 110, NULL, NULL),
-(15, 4, 29, NULL, NULL),
-(16, 4, 75, NULL, NULL),
-(17, 5, 8, NULL, NULL),
-(18, 5, 98, NULL, NULL),
-(19, 5, 69, NULL, NULL),
-(20, 5, 78, NULL, NULL),
-(21, 6, 8, NULL, NULL),
-(22, 6, 98, NULL, NULL),
-(23, 6, 42, NULL, NULL),
-(24, 6, 84, NULL, NULL),
-(25, 7, 94, NULL, NULL),
-(26, 7, 116, NULL, NULL),
-(27, 7, 64, NULL, NULL),
-(28, 7, 69, NULL, NULL),
-(29, 8, 3, NULL, NULL),
-(30, 8, 55, NULL, NULL),
-(31, 8, 8, NULL, NULL),
-(32, 8, 98, NULL, NULL),
-(33, 9, 50, NULL, NULL),
-(34, 9, 90, NULL, NULL),
-(35, 9, 112, NULL, NULL),
-(36, 9, 114, NULL, NULL),
-(37, 10, 70, NULL, NULL),
-(38, 10, 112, NULL, NULL),
-(39, 10, 109, NULL, NULL),
-(40, 10, 113, NULL, NULL),
-(41, 11, 14, NULL, NULL),
-(42, 11, 59, NULL, NULL),
-(43, 11, 45, NULL, NULL),
-(44, 11, 105, NULL, NULL),
+(10, 3, 110, NULL, NULL),
+(11, 3, 10, NULL, NULL),
+(12, 3, 22, NULL, NULL),
+(13, 4, 23, NULL, NULL),
+(14, 4, 107, NULL, NULL),
+(15, 4, 46, NULL, NULL),
+(16, 4, 87, NULL, NULL),
+(17, 5, 15, NULL, NULL),
+(18, 5, 88, NULL, NULL),
+(19, 5, 82, NULL, NULL),
+(20, 5, 94, NULL, NULL),
+(21, 6, 94, NULL, NULL),
+(22, 6, 116, NULL, NULL),
+(23, 6, 64, NULL, NULL),
+(24, 6, 78, NULL, NULL),
+(25, 7, 82, NULL, NULL),
+(26, 7, 84, NULL, NULL),
+(27, 7, 69, NULL, NULL),
+(28, 7, 106, NULL, NULL),
+(29, 8, 8, NULL, NULL),
+(30, 8, 98, NULL, NULL),
+(31, 8, 25, NULL, NULL),
+(32, 8, 84, NULL, NULL),
+(33, 9, 16, NULL, NULL),
+(34, 9, 26, NULL, NULL),
+(35, 9, 41, NULL, NULL),
+(36, 9, 119, NULL, NULL),
+(37, 10, 16, NULL, NULL),
+(38, 10, 50, NULL, NULL),
+(39, 10, 45, NULL, NULL),
+(40, 10, 105, NULL, NULL),
+(41, 11, 37, NULL, NULL),
+(42, 11, 41, NULL, NULL),
+(43, 11, 109, NULL, NULL),
+(44, 11, 113, NULL, NULL),
 (45, 12, 59, NULL, NULL),
 (46, 12, 118, NULL, NULL),
-(47, 12, 41, NULL, NULL),
-(48, 12, 119, NULL, NULL),
+(47, 12, 4, NULL, NULL),
+(48, 12, 16, NULL, NULL),
 (49, 13, 5, NULL, NULL),
-(50, 13, 111, NULL, NULL),
-(51, 13, 19, NULL, NULL),
-(52, 13, 31, NULL, NULL),
-(53, 14, 51, NULL, NULL),
-(54, 14, 60, NULL, NULL),
-(55, 14, 19, NULL, NULL),
-(56, 14, 57, NULL, NULL),
-(57, 15, 13, NULL, NULL),
-(58, 15, 86, NULL, NULL),
+(50, 13, 28, NULL, NULL),
+(51, 13, 34, NULL, NULL),
+(52, 13, 101, NULL, NULL),
+(53, 14, 5, NULL, NULL),
+(54, 14, 111, NULL, NULL),
+(55, 14, 72, NULL, NULL),
+(56, 14, 101, NULL, NULL),
+(57, 15, 5, NULL, NULL),
+(58, 15, 28, NULL, NULL),
 (59, 15, 19, NULL, NULL),
-(60, 15, 96, NULL, NULL),
-(61, 16, 34, NULL, NULL),
-(62, 16, 72, NULL, NULL),
+(60, 15, 104, NULL, NULL),
+(61, 16, 33, NULL, NULL),
+(62, 16, 67, NULL, NULL),
 (63, 16, 31, NULL, NULL),
 (64, 16, 57, NULL, NULL),
-(65, 17, 79, NULL, NULL),
-(66, 17, 81, NULL, NULL),
-(67, 17, 83, NULL, NULL),
-(68, 17, 95, NULL, NULL),
-(69, 18, 79, NULL, NULL),
-(70, 18, 81, NULL, NULL),
-(71, 18, 24, NULL, NULL),
-(72, 18, 68, NULL, NULL),
-(73, 19, 20, NULL, NULL),
-(74, 19, 95, NULL, NULL),
-(75, 19, 21, NULL, NULL),
-(76, 19, 80, NULL, NULL),
-(77, 20, 81, NULL, NULL),
-(78, 20, 92, NULL, NULL),
-(79, 20, 66, NULL, NULL),
-(80, 20, 73, NULL, NULL),
-(81, 21, 11, NULL, NULL),
+(65, 17, 81, NULL, NULL),
+(66, 17, 97, NULL, NULL),
+(67, 17, 20, NULL, NULL),
+(68, 17, 83, NULL, NULL),
+(69, 18, 24, NULL, NULL),
+(70, 18, 66, NULL, NULL),
+(71, 18, 21, NULL, NULL),
+(72, 18, 80, NULL, NULL),
+(73, 19, 36, NULL, NULL),
+(74, 19, 83, NULL, NULL),
+(75, 19, 80, NULL, NULL),
+(76, 19, 85, NULL, NULL),
+(77, 20, 43, NULL, NULL),
+(78, 20, 68, NULL, NULL),
+(79, 20, 21, NULL, NULL),
+(80, 20, 85, NULL, NULL),
+(81, 21, 30, NULL, NULL),
 (82, 21, 115, NULL, NULL),
-(83, 21, 77, NULL, NULL),
-(84, 21, 108, NULL, NULL),
-(85, 22, 27, NULL, NULL),
-(86, 22, 39, NULL, NULL),
+(83, 21, 27, NULL, NULL),
+(84, 21, 103, NULL, NULL),
+(85, 22, 2, NULL, NULL),
+(86, 22, 115, NULL, NULL),
 (87, 22, 38, NULL, NULL),
 (88, 22, 54, NULL, NULL),
-(89, 23, 11, NULL, NULL),
-(90, 23, 44, NULL, NULL),
-(91, 23, 38, NULL, NULL),
-(92, 23, 108, NULL, NULL),
-(93, 24, 11, NULL, NULL),
-(94, 24, 30, NULL, NULL),
-(95, 24, 54, NULL, NULL),
-(96, 24, 108, NULL, NULL),
-(97, 25, 1, NULL, NULL),
-(98, 25, 10, NULL, NULL),
-(99, 25, 22, NULL, NULL),
-(100, 25, 46, NULL, NULL),
-(101, 25, 87, NULL, NULL),
-(102, 25, 18, NULL, NULL),
-(103, 25, 61, NULL, NULL),
-(104, 25, 63, NULL, NULL),
-(105, 25, 74, NULL, NULL),
-(106, 25, 93, NULL, NULL),
-(107, 26, 23, NULL, NULL),
-(108, 26, 102, NULL, NULL),
-(109, 27, 1, NULL, NULL),
-(110, 27, 10, NULL, NULL),
-(111, 27, 22, NULL, NULL),
-(112, 27, 46, NULL, NULL),
-(113, 27, 87, NULL, NULL),
-(114, 28, 18, NULL, NULL),
-(115, 28, 61, NULL, NULL),
-(116, 28, 63, NULL, NULL),
-(117, 28, 74, NULL, NULL),
-(118, 28, 93, NULL, NULL),
-(119, 29, 1, NULL, NULL);
+(89, 23, 44, NULL, NULL),
+(90, 23, 115, NULL, NULL),
+(91, 23, 39, NULL, NULL),
+(92, 23, 103, NULL, NULL),
+(93, 24, 7, NULL, NULL),
+(94, 24, 62, NULL, NULL),
+(95, 24, 27, NULL, NULL),
+(96, 24, 103, NULL, NULL),
+(97, 25, 1, NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -366,7 +344,9 @@ INSERT INTO `migrations` (`id`, `migration`, `batch`) VALUES
 (6, '2022_05_15_113416_create_sections_table', 1),
 (7, '2022_05_15_113431_create_blocks_table', 1),
 (8, '2022_05_15_113438_create_orders_table', 1),
-(9, '2022_05_15_113446_create_block_order_table', 1);
+(9, '2022_05_15_113446_create_block_order_table', 1),
+(13, '2022_05_17_220328_create_statuses_table', 2),
+(14, '2022_05_17_233438_create_orders_table', 2);
 
 -- --------------------------------------------------------
 
@@ -378,6 +358,7 @@ CREATE TABLE `orders` (
   `id` bigint UNSIGNED NOT NULL,
   `user_id` bigint UNSIGNED NOT NULL,
   `location_id` bigint UNSIGNED NOT NULL,
+  `status_id` bigint UNSIGNED NOT NULL,
   `amount` int NOT NULL,
   `begin` date NOT NULL,
   `end` date NOT NULL,
@@ -390,36 +371,32 @@ CREATE TABLE `orders` (
 -- Дамп данных таблицы `orders`
 --
 
-INSERT INTO `orders` (`id`, `user_id`, `location_id`, `amount`, `begin`, `end`, `code`, `created_at`, `updated_at`) VALUES
-(1, 4, 1, 13174, '2021-10-22', '2021-11-02', '415468470478', '2022-05-16 17:04:19', '2022-05-16 17:04:19'),
-(2, 2, 1, 19668, '2021-12-28', '2022-01-18', '885984816375', '2022-05-16 17:04:19', '2022-05-16 17:04:19'),
-(3, 2, 1, 24526, '2021-09-14', '2021-09-29', '443353602695', '2022-05-16 17:04:19', '2022-05-16 17:04:19'),
-(4, 1, 1, 22693, '2021-10-29', '2021-11-19', '334734794437', '2022-05-16 17:04:19', '2022-05-16 17:04:19'),
-(5, 4, 2, 19494, '2021-12-27', '2022-01-03', '195437710194', '2022-05-16 17:04:19', '2022-05-16 17:04:19'),
-(6, 3, 2, 17295, '2021-11-18', '2021-11-30', '301082726315', '2022-05-16 17:04:19', '2022-05-16 17:04:19'),
-(7, 3, 2, 23303, '2021-12-18', '2022-01-01', '678541336283', '2022-05-16 17:04:19', '2022-05-16 17:04:19'),
-(8, 1, 2, 21478, '2021-10-25', '2021-10-29', '438107334880', '2022-05-16 17:04:19', '2022-05-16 17:04:19'),
-(9, 1, 3, 23654, '2022-01-31', '2022-02-20', '854243933272', '2022-05-16 17:04:19', '2022-05-16 17:04:19'),
-(10, 1, 3, 22932, '2022-01-10', '2022-01-25', '891213464993', '2022-05-16 17:04:19', '2022-05-16 17:04:19'),
-(11, 4, 3, 14694, '2021-08-18', '2021-09-05', '936772680728', '2022-05-16 17:04:19', '2022-05-16 17:04:19'),
-(12, 4, 3, 22230, '2022-01-17', '2022-01-28', '358652165612', '2022-05-16 17:04:19', '2022-05-16 17:04:19'),
-(13, 4, 4, 19427, '2021-12-11', '2021-12-27', '971035153013', '2022-05-16 17:04:19', '2022-05-16 17:04:19'),
-(14, 1, 4, 19365, '2021-12-23', '2022-01-02', '521636519539', '2022-05-16 17:04:19', '2022-05-16 17:04:19'),
-(15, 3, 4, 17112, '2021-07-31', '2021-08-07', '380637708281', '2022-05-16 17:04:19', '2022-05-16 17:04:19'),
-(16, 2, 4, 24297, '2021-10-23', '2021-11-05', '326334870657', '2022-05-16 17:04:19', '2022-05-16 17:04:19'),
-(17, 1, 5, 18530, '2022-03-04', '2022-03-17', '697190909515', '2022-05-16 17:04:19', '2022-05-16 17:04:19'),
-(18, 3, 5, 16065, '2021-09-18', '2021-10-03', '575647134289', '2022-05-16 17:04:19', '2022-05-16 17:04:19'),
-(19, 3, 5, 12786, '2021-08-02', '2021-08-21', '309348759512', '2022-05-16 17:04:19', '2022-05-16 17:04:19'),
-(20, 1, 5, 17540, '2021-08-17', '2021-09-06', '213773757470', '2022-05-16 17:04:19', '2022-05-16 17:04:19'),
-(21, 2, 6, 23354, '2022-02-05', '2022-02-24', '918619008050', '2022-05-16 17:04:19', '2022-05-16 17:04:19'),
-(22, 3, 6, 19221, '2021-08-21', '2021-09-07', '552751943855', '2022-05-16 17:04:19', '2022-05-16 17:04:19'),
-(23, 1, 6, 23216, '2022-01-24', '2022-02-01', '223035843226', '2022-05-16 17:04:19', '2022-05-16 17:04:19'),
-(24, 1, 6, 14426, '2021-08-30', '2021-09-10', '129670284526', '2022-05-16 17:04:19', '2022-05-16 17:04:19'),
-(25, 4, 1, 120, '2022-10-22', '2022-10-24', 'DN38nxtJDSV9', '2022-05-16 17:08:33', '2022-05-16 17:08:33'),
-(26, 4, 1, 24, '2022-10-22', '2022-10-24', 'Xc1yUEgnwHLm', '2022-05-16 17:08:51', '2022-05-16 17:08:51'),
-(27, 4, 1, 60, '2022-10-25', '2022-10-27', 'lnJ8TJ3xpfmZ', '2022-05-16 17:10:30', '2022-05-16 17:10:30'),
-(28, 4, 1, 60, '2022-10-25', '2022-10-27', '6i1JT6gCJOsN', '2022-05-16 17:19:39', '2022-05-16 17:19:39'),
-(29, 4, 1, 12, '2022-10-30', '2022-11-01', 'Z46kvVeYnbFW', '2022-05-16 17:19:51', '2022-05-16 17:19:51');
+INSERT INTO `orders` (`id`, `user_id`, `location_id`, `status_id`, `amount`, `begin`, `end`, `code`, `created_at`, `updated_at`) VALUES
+(1, 3, 1, 1, 22456, '2022-03-19', '2022-04-03', '879653940744', '2022-05-17 19:21:10', '2022-05-17 19:21:10'),
+(2, 1, 1, 1, 14594, '2022-01-23', '2022-02-05', '459392178343', '2022-05-17 19:21:10', '2022-05-17 19:21:10'),
+(3, 4, 1, 1, 16567, '2022-03-24', '2022-04-01', '770606706531', '2022-05-17 19:21:10', '2022-05-17 19:21:10'),
+(4, 3, 1, 2, 18897, '2021-09-22', '2021-10-13', '405326983908', '2022-05-17 19:21:10', '2022-05-17 19:21:10'),
+(5, 1, 2, 1, 23184, '2022-02-02', '2022-02-08', '394566404299', '2022-05-17 19:21:10', '2022-05-17 19:21:10'),
+(6, 1, 2, 1, 15796, '2021-08-18', '2021-09-03', '172726668570', '2022-05-17 19:21:10', '2022-05-17 19:21:10'),
+(7, 3, 2, 2, 24182, '2022-03-25', '2022-04-05', '175893933307', '2022-05-17 19:21:10', '2022-05-17 19:21:10'),
+(8, 1, 2, 1, 15237, '2022-03-25', '2022-04-08', '146285664111', '2022-05-17 19:21:10', '2022-05-17 19:21:10'),
+(9, 4, 3, 2, 19627, '2022-02-05', '2022-02-15', '581931560055', '2022-05-17 19:21:10', '2022-05-17 19:21:10'),
+(10, 2, 3, 1, 20013, '2022-03-19', '2022-04-11', '404597770798', '2022-05-17 19:21:10', '2022-05-17 19:21:10'),
+(11, 1, 3, 1, 20450, '2021-08-21', '2021-08-31', '626588268582', '2022-05-17 19:21:10', '2022-05-17 19:21:10'),
+(12, 4, 3, 2, 16821, '2021-09-18', '2021-10-05', '362112113855', '2022-05-17 19:21:10', '2022-05-17 19:21:10'),
+(13, 1, 4, 1, 22752, '2021-11-21', '2021-12-04', '415964491187', '2022-05-17 19:21:10', '2022-05-17 19:21:10'),
+(14, 4, 4, 2, 13054, '2021-10-29', '2021-11-03', '519536661903', '2022-05-17 19:21:10', '2022-05-17 19:21:10'),
+(15, 3, 4, 1, 22799, '2022-04-03', '2022-04-22', '355818607904', '2022-05-17 19:21:10', '2022-05-17 19:21:10'),
+(16, 4, 4, 1, 17313, '2022-01-12', '2022-01-22', '220333839775', '2022-05-17 19:21:10', '2022-05-17 19:21:10'),
+(17, 3, 5, 2, 23860, '2022-02-15', '2022-03-08', '989126771275', '2022-05-17 19:21:10', '2022-05-17 19:21:10'),
+(18, 1, 5, 1, 19178, '2021-10-24', '2021-11-04', '452431168791', '2022-05-17 19:21:10', '2022-05-17 19:21:10'),
+(19, 2, 5, 1, 12715, '2021-09-07', '2021-09-16', '388015873799', '2022-05-17 19:21:10', '2022-05-17 19:21:10'),
+(20, 4, 5, 2, 16444, '2022-04-15', '2022-05-06', '940231796323', '2022-05-17 19:21:10', '2022-05-17 19:21:10'),
+(21, 3, 6, 2, 23216, '2022-01-29', '2022-02-08', '896065645139', '2022-05-17 19:21:10', '2022-05-17 19:21:10'),
+(22, 2, 6, 2, 20667, '2022-03-12', '2022-03-19', '169533831752', '2022-05-17 19:21:10', '2022-05-17 19:21:10'),
+(23, 1, 6, 1, 13742, '2021-08-29', '2021-09-07', '499034106856', '2022-05-17 19:21:10', '2022-05-17 19:21:10'),
+(24, 3, 6, 2, 20622, '2021-12-28', '2022-01-13', '377263601198', '2022-05-17 19:21:10', '2022-05-17 19:21:10'),
+(25, 4, 1, 1, 12, '2022-03-24', '2022-03-26', 'SUf55WooVyqg', '2022-05-17 19:35:35', '2022-05-17 19:35:35');
 
 -- --------------------------------------------------------
 
@@ -462,7 +439,7 @@ INSERT INTO `personal_access_tokens` (`id`, `tokenable_type`, `tokenable_id`, `n
 (4, 'App\\Models\\User', 4, 'qb', 'fde2dc5f059a210b36caea0a33abed5f1cd5d0f09d6bfaaccbec37491ac15bfe', '[\"*\"]', NULL, '2022-05-15 20:48:18', '2022-05-15 20:48:18'),
 (5, 'App\\Models\\User', 4, 'MyApp', '4beefb2da098f9bcb6210c429bd2f8658f5e5acc07c08cdfd2d07476cddf8153', '[\"*\"]', NULL, '2022-05-15 20:50:27', '2022-05-15 20:50:27'),
 (6, 'App\\Models\\User', 4, 'MyApp', 'cefa766e679173083c6f6dd651d85024f62d715fde619b16bf7b9cee5cb09992', '[\"*\"]', NULL, '2022-05-15 21:00:32', '2022-05-15 21:00:32'),
-(7, 'App\\Models\\User', 4, 'MyApp', '42b5841ef379859a0b7be4851a1c287d663e6dddec3d0a1f14da0a4e4c41da52', '[\"*\"]', '2022-05-16 17:19:51', '2022-05-15 21:00:36', '2022-05-16 17:19:51'),
+(7, 'App\\Models\\User', 4, 'MyApp', '42b5841ef379859a0b7be4851a1c287d663e6dddec3d0a1f14da0a4e4c41da52', '[\"*\"]', '2022-05-17 19:38:19', '2022-05-15 21:00:36', '2022-05-17 19:38:19'),
 (8, 'App\\Models\\User', 4, 'MyApp', '9c0e95fbb668c38e5eebaaddbfe225a833741aabfa7b67c627127651cc3a7a23', '[\"*\"]', NULL, '2022-05-15 21:10:23', '2022-05-15 21:10:23'),
 (9, 'App\\Models\\User', 4, 'qb', '528727467eaa7bd7690d2560fc13e152f8ee020ef8c2df55bd6d7195a3d78bac', '[\"*\"]', NULL, '2022-05-15 21:10:33', '2022-05-15 21:10:33'),
 (10, 'App\\Models\\User', 4, 'qb', '13a88121e49c28a0442542bed615234da1a8c685d9472862fe2289b98ffb8728', '[\"*\"]', NULL, '2022-05-16 08:20:20', '2022-05-16 08:20:20'),
@@ -474,7 +451,11 @@ INSERT INTO `personal_access_tokens` (`id`, `tokenable_type`, `tokenable_id`, `n
 (16, 'App\\Models\\User', 4, 'qb', '29207c2838b83bb151a318824fde2e50bcd011e03bc9ce7f5df935a15c569ce4', '[\"*\"]', NULL, '2022-05-16 09:32:29', '2022-05-16 09:32:29'),
 (17, 'App\\Models\\User', 4, 'qb', '0c48db7a83a2cfb15a3c94c67d242da3f1cdee314ee269cae244ab7f351d5f40', '[\"*\"]', NULL, '2022-05-16 09:34:12', '2022-05-16 09:34:12'),
 (18, 'App\\Models\\User', 4, 'qb', '8679853855fb1a67569a1d4c9a7bf247410d83a30a1c99a603e950c4a2f70d56', '[\"*\"]', NULL, '2022-05-16 09:39:36', '2022-05-16 09:39:36'),
-(19, 'App\\Models\\User', 4, 'qb', '8bbfe917e906c33bf7d9cf14b9c3f790704c5bf80eb80757745d6e675ad01835', '[\"*\"]', NULL, '2022-05-16 16:00:35', '2022-05-16 16:00:35');
+(19, 'App\\Models\\User', 4, 'qb', '8bbfe917e906c33bf7d9cf14b9c3f790704c5bf80eb80757745d6e675ad01835', '[\"*\"]', NULL, '2022-05-16 16:00:35', '2022-05-16 16:00:35'),
+(20, 'App\\Models\\User', 4, 'qb', 'af4cccdd8743c7546592d2a50815c75d6ef257c3b995b089f3e4c2db702c875d', '[\"*\"]', NULL, '2022-05-17 06:48:11', '2022-05-17 06:48:11'),
+(21, 'App\\Models\\User', 4, 'qb', 'c5d222a161a8c0706fb31a9590cd5c6a0bd3d7faf0ec4cc10943a576bf2d1500', '[\"*\"]', NULL, '2022-05-17 15:07:35', '2022-05-17 15:07:35'),
+(22, 'App\\Models\\User', 4, 'qb', '3c08eff160fb8b54e2906c6d9a0cc6356568dec9c49b9659a81bc783e592b477', '[\"*\"]', NULL, '2022-05-17 16:10:00', '2022-05-17 16:10:00'),
+(23, 'App\\Models\\User', 4, 'qb', 'c4b4f05ad237d730428d32ee9401878e0b636f056db993915fa0e18c21c5c1dd', '[\"*\"]', NULL, '2022-05-17 16:23:07', '2022-05-17 16:23:07');
 
 -- --------------------------------------------------------
 
@@ -521,6 +502,27 @@ INSERT INTO `sections` (`id`, `name`, `temperature`, `location_id`, `created_at`
 (23, 'Section Illo', -3, 2, '2022-05-15 18:48:39', '2022-05-15 18:48:39'),
 (24, 'Section Voluptatem', -19, 6, '2022-05-15 18:48:39', '2022-05-15 18:48:39'),
 (25, 'Section Quia', -13, 4, '2022-05-15 18:48:39', '2022-05-15 18:48:39');
+
+-- --------------------------------------------------------
+
+--
+-- Структура таблицы `statuses`
+--
+
+CREATE TABLE `statuses` (
+  `id` bigint UNSIGNED NOT NULL,
+  `name` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Дамп данных таблицы `statuses`
+--
+
+INSERT INTO `statuses` (`id`, `name`, `created_at`, `updated_at`) VALUES
+(1, 'Active', NULL, NULL),
+(2, 'Deleted', NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -593,7 +595,8 @@ ALTER TABLE `migrations`
 ALTER TABLE `orders`
   ADD PRIMARY KEY (`id`),
   ADD KEY `orders_user_id_foreign` (`user_id`),
-  ADD KEY `orders_location_id_foreign` (`location_id`);
+  ADD KEY `orders_location_id_foreign` (`location_id`),
+  ADD KEY `orders_status_id_foreign` (`status_id`);
 
 --
 -- Индексы таблицы `password_resets`
@@ -617,6 +620,12 @@ ALTER TABLE `sections`
   ADD KEY `sections_location_id_foreign` (`location_id`);
 
 --
+-- Индексы таблицы `statuses`
+--
+ALTER TABLE `statuses`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Индексы таблицы `users`
 --
 ALTER TABLE `users`
@@ -637,7 +646,7 @@ ALTER TABLE `blocks`
 -- AUTO_INCREMENT для таблицы `block_order`
 --
 ALTER TABLE `block_order`
-  MODIFY `id` bigint UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=120;
+  MODIFY `id` bigint UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=98;
 
 --
 -- AUTO_INCREMENT для таблицы `failed_jobs`
@@ -649,31 +658,37 @@ ALTER TABLE `failed_jobs`
 -- AUTO_INCREMENT для таблицы `locations`
 --
 ALTER TABLE `locations`
-  MODIFY `id` bigint UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `id` bigint UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
 -- AUTO_INCREMENT для таблицы `migrations`
 --
 ALTER TABLE `migrations`
-  MODIFY `id` int UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+  MODIFY `id` int UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
 
 --
 -- AUTO_INCREMENT для таблицы `orders`
 --
 ALTER TABLE `orders`
-  MODIFY `id` bigint UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=30;
+  MODIFY `id` bigint UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=26;
 
 --
 -- AUTO_INCREMENT для таблицы `personal_access_tokens`
 --
 ALTER TABLE `personal_access_tokens`
-  MODIFY `id` bigint UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
+  MODIFY `id` bigint UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=24;
 
 --
 -- AUTO_INCREMENT для таблицы `sections`
 --
 ALTER TABLE `sections`
   MODIFY `id` bigint UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=26;
+
+--
+-- AUTO_INCREMENT для таблицы `statuses`
+--
+ALTER TABLE `statuses`
+  MODIFY `id` bigint UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT для таблицы `users`
@@ -703,6 +718,7 @@ ALTER TABLE `block_order`
 --
 ALTER TABLE `orders`
   ADD CONSTRAINT `orders_location_id_foreign` FOREIGN KEY (`location_id`) REFERENCES `locations` (`id`),
+  ADD CONSTRAINT `orders_status_id_foreign` FOREIGN KEY (`status_id`) REFERENCES `statuses` (`id`),
   ADD CONSTRAINT `orders_user_id_foreign` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`);
 
 --

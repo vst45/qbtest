@@ -22,9 +22,9 @@ class AuthController extends BaseController
             $user = Auth::user();
             $data['token'] =  $user->createToken('qb')->plainTextToken;
             $data['name'] =  $user->name;
-            return ServiceHttp::sendResponse($data, 'User login successfully.');
+            return ServiceHttp::sendResponse('Логин ОК', $data);
         } else {
-            return ServiceHttp::sendError('Unauthorised.', ['error' => 'Unauthorised']);
+            return ServiceHttp::sendError('Не верный пароль', [], 404);
         }
     }
 
@@ -32,7 +32,7 @@ class AuthController extends BaseController
     {
         auth()->user()->tokens()->delete();
 
-        return ServiceHttp::sendResponse([], 'Tokens Revoked.');
+        return ServiceHttp::sendResponse('Токен удален');
     }
 
 }

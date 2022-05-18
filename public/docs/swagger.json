@@ -1,0 +1,673 @@
+{
+    "swagger": "2.0",
+    "info": {
+        "description": "",
+        "version": "1.0",
+        "title": "Qberry Test"
+    },
+    "host": "qberry-test.loc",
+    "basePath": "/api",
+    "tags": [
+        {
+            "name": "signin",
+            "description": "Логин"
+        },
+        {
+            "name": "signout",
+            "description": "Логаут"
+        },
+        {
+            "name": "location",
+            "description": "Локации и свободные блоки"
+        },
+        {
+            "name": "order",
+            "description": "Заказ холодильных блоков"
+        }
+    ],
+    "schemes": [
+        "http"
+    ],
+    "paths": {
+        "/signin": {
+            "post": {
+                "tags": [
+                    "signin"
+                ],
+                "summary": "Логин в систему и получение токена авторизации",
+                "description": "",
+                "operationId": "authSignin",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "in": "body",
+                        "name": "body",
+                        "description": "логин в систему",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/Login"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "удачный вход",
+                        "schema": {
+                            "$ref": "#/definitions/ApiResponseLoginOk"
+                        }
+                    },
+                    "400": {
+                        "description": "не верные данные",
+                        "schema": {
+                            "$ref": "#/definitions/ApiResponseInputError"
+                        }
+                    },
+                    "404": {
+                        "description": "юзер не найден"
+                    }
+                }
+            }
+        },
+        "/signout": {
+            "post": {
+                "tags": [
+                    "signout"
+                ],
+                "summary": "Выход из системы",
+                "description": "",
+                "operationId": "authSignout",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    },
+                    "401": {
+                        "description": "нет авторизации"
+                    }
+                }
+            }
+        },
+        "/location": {
+            "get": {
+                "tags": [
+                    "location"
+                ],
+                "summary": "Список локаций и свободных блоков на сегодняшний день",
+                "description": "",
+                "operationId": "locationList",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "name": "date",
+                        "in": "query",
+                        "description": "Дата",
+                        "required": false,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Список",
+                        "schema": {
+                            "$ref": "#/definitions/ApiResponseLocation"
+                        }
+                    },
+                    "401": {
+                        "description": "нет авторизации"
+                    }
+                }
+            }
+        },
+        "/order/debt": {
+            "get": {
+                "tags": [
+                    "order"
+                ],
+                "summary": "Сумма долга на даную дату",
+                "description": "",
+                "operationId": "debtt",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "name": "date",
+                        "in": "query",
+                        "description": "Дата",
+                        "required": false,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Долг",
+                        "schema": {
+                            "$ref": "#/definitions/ApiResponseDebt"
+                        }
+                    },
+                    "401": {
+                        "description": "нет авторизации"
+                    }
+                }
+            }
+        },
+        "/order/calculate": {
+            "post": {
+                "tags": [
+                    "order"
+                ],
+                "summary": "Оценка заказа холодильных блоков",
+                "description": "",
+                "operationId": "calculateStore",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "in": "body",
+                        "name": "body",
+                        "description": "калькуляция",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/StoreOrder"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "калькуляция",
+                        "schema": {
+                            "$ref": "#/definitions/ApiResponseCalculate"
+                        }
+                    },
+                    "400": {
+                        "description": "не верные данные",
+                        "schema": {
+                            "$ref": "#/definitions/ApiResponseInputError"
+                        }
+                    },
+                    "401": {
+                        "description": "нет авторизации"
+                    },
+                    "404": {
+                        "description": "нет свободных блоков"
+                    }
+                }
+            }
+        },
+        "/order": {
+            "get": {
+                "tags": [
+                    "order"
+                ],
+                "summary": "Список заказов",
+                "description": "",
+                "operationId": "orderList",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Список",
+                        "schema": {
+                            "$ref": "#/definitions/ApiResponseOrderList"
+                        }
+                    },
+                    "401": {
+                        "description": "нет авторизации"
+                    }
+                }
+            },
+            "post": {
+                "tags": [
+                    "order"
+                ],
+                "summary": "Заказ холодильных блоков",
+                "description": "",
+                "operationId": "orderStore",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "in": "body",
+                        "name": "body",
+                        "description": "заказ холодильных блоков",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/StoreOrder"
+                        }
+                    }
+                ],
+                "responses": {
+                    "201": {
+                        "description": "заказ оформлен",
+                        "schema": {
+                            "$ref": "#/definitions/ApiResponseOrder"
+                        }
+                    },
+                    "400": {
+                        "description": "не верные данные",
+                        "schema": {
+                            "$ref": "#/definitions/ApiResponseInputError"
+                        }
+                    },
+                    "401": {
+                        "description": "нет авторизации"
+                    },
+                    "404": {
+                        "description": "нет свободных блоков"
+                    }
+                }
+            }
+        },
+        "/order/{id}": {
+            "get": {
+                "tags": [
+                    "order"
+                ],
+                "summary": "Получение заказа по ID",
+                "operationId": "getOrderById",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "ID заказа",
+                        "required": true,
+                        "type": "integer"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "ОК",
+                        "schema": {
+                            "$ref": "#/definitions/ApiResponseOrder"
+                        }
+                    },
+                    "401": {
+                        "description": "нет авторизации"
+                    },
+                    "403": {
+                        "description": "запрещен доступ к заказу"
+                    },
+                    "404": {
+                        "description": "заказ не найден"
+                    }
+                }
+            }
+        }
+    },
+    "definitions": {
+        "Login": {
+            "type": "object",
+            "properties": {
+                "email": {
+                    "type": "string"
+                },
+                "password": {
+                    "type": "string"
+                }
+            },
+            "xml": {
+                "name": "Login"
+            }
+        },
+        "StoreOrder": {
+            "type": "object",
+            "properties": {
+                "location_id": {
+                    "type": "string",
+                    "example": "1",
+                    "description": "ID локации"
+                },
+                "volume": {
+                    "type": "string",
+                    "example": "10",
+                    "description": "необходимый объем м3"
+                },
+                "temperature": {
+                    "type": "string",
+                    "example": "-10",
+                    "minimum": -100,
+                    "maximum": 0,
+                    "description": "температура холодильников"
+                },
+                "start_date": {
+                    "type": "string",
+                    "example": "2022-10-25",
+                    "description": "начальная дата"
+                },
+                "period": {
+                    "type": "string",
+                    "example": "3",
+                    "minimum": 1,
+                    "maximum": 24,
+                    "description": "срок оренды в днях"
+                }
+            },
+            "xml": {
+                "name": "StoreOrder"
+            }
+        },
+        "Order": {
+            "type": "object",
+            "properties": {
+                "order_id": {
+                    "type": "integer",
+                    "example": "30",
+                    "description": "ID заказа"
+                },
+                "location_id": {
+                    "type": "integer",
+                    "example": "30",
+                    "description": "ID локации"
+                },
+                "amount": {
+                    "type": "integer",
+                    "example": "12",
+                    "description": "сумма"
+                },
+                "begin": {
+                    "type": "string",
+                    "example": "2022-10-30",
+                    "description": "начало периода"
+                },
+                "end": {
+                    "type": "string",
+                    "example": "2022-11-01",
+                    "description": "окончание периода"
+                },
+                "code": {
+                    "type": "string",
+                    "example": "fthzZpzxaFf3",
+                    "description": "код доступа"
+                },
+                "status_id": {
+                    "type": "integer",
+                    "example": "1",
+                    "description": "ID статуса"
+                },
+                "status": {
+                    "type": "string",
+                    "example": "Deleted",
+                    "description": "cтатус заказа"
+                }
+            },
+            "xml": {
+                "name": "Order"
+            }
+        },
+        "ApiResponseLoginOk": {
+            "type": "object",
+            "properties": {
+                "success": {
+                    "type": "boolean",
+                    "example": "true"
+                },
+                "message": {
+                    "type": "string",
+                    "example": "Логин ОК"
+                },
+                "data": {
+                    "type": "object",
+                    "properties": {
+                        "token": {
+                            "type": "string",
+                            "example": "22|MqU5HBq7ibc1iyCSbwsxYmS9wDDxPDLO7Hxrxf4j"
+                        },
+                        "name": {
+                            "type": "string",
+                            "example": "Petro Petrov"
+                        }
+                    }
+                }
+            }
+        },
+        "ApiResponseLocation": {
+            "type": "object",
+            "properties": {
+                "success": {
+                    "type": "boolean",
+                    "example": "true"
+                },
+                "message": {
+                    "type": "string"
+                },
+                "data": {
+                    "properties": {
+                        "date": {
+                            "type": "string",
+                            "example": "2022-07-16"
+                        },
+                        "list": {
+                            "type": "array",
+                            "items": {
+                                "type": "object",
+                                "properties": {
+                                    "location_id": {
+                                        "type": "integer",
+                                        "description": "ID локации",
+                                        "example": "1"
+                                    },
+                                    "location": {
+                                        "type": "string",
+                                        "description": "название локации",
+                                        "example": "Торонто"
+                                    },
+                                    "quantity_total": {
+                                        "type": "integer",
+                                        "description": "всего количество свободных блоков в локации",
+                                        "example": "225"
+                                    },
+                                    "sections": {
+                                        "type": "array",
+                                        "items": {
+                                            "type": "object",
+                                            "properties": {
+                                                "section_id": {
+                                                    "type": "integer",
+                                                    "description": "ID помещения",
+                                                    "example": "41"
+                                                },
+                                                "temperature": {
+                                                    "type": "integer",
+                                                    "description": "темература помещения",
+                                                    "example": "-10"
+                                                },
+                                                "quantity": {
+                                                    "type": "integer",
+                                                    "description": "количество свободных блоков в помещении",
+                                                    "example": "22"
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "ApiResponseDebt": {
+            "type": "object",
+            "properties": {
+                "success": {
+                    "type": "boolean",
+                    "example": "true"
+                },
+                "message": {
+                    "type": "string",
+                    "example": "Долг"
+                },
+                "data": {
+                    "type": "object",
+                    "properties": {
+                        "Дата": {
+                            "type": "string",
+                            "example": "2022-07-12",
+                            "description": "дата"
+                        },
+                        "amount": {
+                            "type": "integer",
+                            "example": "12",
+                            "description": "сумма"
+                        }
+                    }
+                }
+            }
+        },
+        "ApiResponseCalculate": {
+            "type": "object",
+            "properties": {
+                "success": {
+                    "type": "boolean",
+                    "example": "true"
+                },
+                "message": {
+                    "type": "string",
+                    "example": "Калькуляция"
+                },
+                "data": {
+                    "type": "object",
+                    "properties": {
+                        "location": {
+                            "type": "string",
+                            "example": "Торонто",
+                            "description": "название локации"
+                        },
+                        "number_of_blocks": {
+                            "type": "integer",
+                            "example": "32",
+                            "description": "количество блоков"
+                        },
+                        "amount": {
+                            "type": "integer",
+                            "example": "12",
+                            "description": "сумма"
+                        },
+                        "begin": {
+                            "type": "string",
+                            "example": "2022-10-30",
+                            "description": "начало периода"
+                        },
+                        "end": {
+                            "type": "string",
+                            "example": "2022-11-01",
+                            "description": "окончание периода"
+                        }
+                    }
+                }
+            }
+        },
+        "ApiResponseOrder": {
+            "type": "object",
+            "properties": {
+                "success": {
+                    "type": "boolean",
+                    "example": "true"
+                },
+                "message": {
+                    "type": "string",
+                    "example": "Заказ"
+                },
+                "data": {
+                    "$ref": "#/definitions/Order"
+                }
+            }
+        },
+        "ApiResponseOrderList": {
+            "type": "object",
+            "properties": {
+                "success": {
+                    "type": "boolean",
+                    "example": "true"
+                },
+                "message": {
+                    "type": "string",
+                    "example": "Список заказов"
+                },
+                "data": {
+                    "properties": {
+                        "date": {
+                            "type": "string",
+                            "example": "2022-07-16"
+                        },
+                        "total_amount": {
+                            "type": "integer",
+                            "example": "14252"
+                        },
+                        "list": {
+                            "type": "array",
+                            "items": {
+                                "$ref": "#/definitions/Order"
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "ApiResponseInputError": {
+            "type": "object",
+            "properties": {
+                "success": {
+                    "type": "boolean",
+                    "example": "false"
+                },
+                "message": {
+                    "type": "string",
+                    "example": "Ошибка данных"
+                },
+                "errors": {
+                    "type": "object",
+                    "properties": {
+                        "nameField1": {
+                            "type": "array",
+                            "items": {
+                                "type": "string",
+                                "example": "Обязательное поле"
+                            }
+                        },
+                        "nameField2": {
+                            "type": "array",
+                            "items": {
+                                "type": "string",
+                                "example": "Цифровое поле"
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

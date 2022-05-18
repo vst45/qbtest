@@ -3,6 +3,7 @@
 namespace App\Services;
 
 use App\Models\Order;
+use App\Models\Status;
 use Carbon\Carbon;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Str;
@@ -25,6 +26,7 @@ class ServiceOrder
             ->join('sections', 'sections.id', '=', 'blocks.section_id')
 
             ->where('orders.location_id', $data['location_id'])
+            ->where('orders.status_id', '!=', Status::where('name', 'Deleted')->first()->id)
 
             ->where(function ($query) use ($data) {
                 $query
@@ -149,6 +151,7 @@ class ServiceOrder
             $order = Order::create([
                 'user_id' => auth()->user()->id,
                 'location_id' => $data['location_id'],
+                'status_id' => Status::where('name', 'Active')->first()->id,
                 'amount' => $this->priceBlock * $data['need_blocks'],
                 'begin' => $data['start_date'],
                 'end' => $data['end_date'],
@@ -159,8 +162,7 @@ class ServiceOrder
 
         if (!$order || !$orderBlocks) {
             return [
-                'result' => false,
-                'msg' => 'Ошибка сохранения'
+                'result' => false
             ];
         }
 
@@ -172,8 +174,7 @@ class ServiceOrder
                 'begin' => $order->begin,
                 'end' => $order->end,
                 'code' => $order->code,
-            ],
-            'msg' => 'Заказ создан'
+            ]
         ];
     }
 }

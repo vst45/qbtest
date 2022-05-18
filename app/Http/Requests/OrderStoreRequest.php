@@ -38,7 +38,7 @@ class OrderStoreRequest extends FormRequest
     public function failedValidation(Validator $validator)
     {
         throw new HttpResponseException(
-            ServiceHttp::sendError('Validation Error.', $validator->errors())
+            ServiceHttp::sendError('Validation Error.', $validator->errors(), 400)
         );
     }
 
