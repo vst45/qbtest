@@ -1,7 +1,10 @@
 
 ## Документация
 
-<a href="/public/docs">/docs</a>
+<a href="/public/TZ">/public/TZ</a> - задание
+
+<a href="/public/docs">/docs</a> - OpenAPI
+
 
 ## DB
 
